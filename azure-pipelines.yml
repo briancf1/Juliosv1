@@ -11,6 +11,8 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'e37a2b11-fca4-4448-ad00-e14fb97a7db8'
+  appName: JuliosRestaurant
+  azureSubscription: JuliosWebApp
   imageRepository: 'briancfjulios'
   containerRegistry: 'julios.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Juliosv1/Dockerfile'
@@ -42,6 +44,6 @@ stages:
     - task: AzureWebAppContainer@1
       displayName: 'Azure Web App on Container Deploy'
       inputs:
-        azureSubscription: JuliosWebApp
+        azureSubscription: $(azureSubscription)
         appName: $(appName)
         imageName: $(containerRegistry)/$(imageRepository):$(tag)

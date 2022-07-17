@@ -1,0 +1,35 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:10708",
+      "sslPort": 44334
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Juliosv1": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      //"applicationUrl": "https://localhost:54467;http://localhost:54464",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy",
+        "ASPNETCORE_HTTPS_PORT": "56516",
+        "ASPNETCORE_URLS": "https:////+:443;http:////+:80"
+      },
+      "publishAllPorts": true,
+      "useSSL": true,
+      "httpPort": 56517,
+      "sslPort": 56516
+    }
+  }
+}
